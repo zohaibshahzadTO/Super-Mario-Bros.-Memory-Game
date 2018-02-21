@@ -47,3 +47,9 @@ Step two is much simpler than step one. Now we’re going to duplicate the cards
 To do this, we'll shuffle the array using sort() and Math.random(). Don’t get how that works? Here.
 
 Place this code right after the declaration of gameGrid.
+
+# Add selected style for selected cards
+
+Now we should be able to select cards. We're just going to add a simple CSS style so we can see selected items easily.
+
+We’ll add an event listener to the entire grid. Anytime an element is clicked, the selected class will be applied to it. Add this code to the bottom of script.js

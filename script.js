@@ -84,11 +84,22 @@ let gameGrid = cardsArray.concat(cardsArray);
 // For each item in the gameGrid array...
 gameGrid.forEach(item => {
 
-
   // Randomize game grid on each load
   gameGrid.sort(() => 0.5 - Math.random());
 
+  // Added event listener to grid
+  grid.addEventListener('click', function (event) {
+    // The event target is our clicked item
+    let clicked = event.target;
 
+    // Do not allow the grid section itself to be selectedl only select divs inside the grid
+    if (clicked.nodeName === 'SECTION') {
+      return;
+    }
+
+    // Added selected class
+    clicked.classList.add('selected');
+  });
 
 
 
