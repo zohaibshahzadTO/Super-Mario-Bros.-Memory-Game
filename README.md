@@ -93,3 +93,33 @@ Currently, when we click on any of the elements, the transitions happen immediat
 We’re going to use setTimeout() to make the delays. First we’ll set my delay time, which we’re choosing to be 1200 milliseconds, or 1.2 seconds.
 
 All we're going to do now is put the functions from before in the setTimeout(), with the delay variable as the amount of time for the timeout to last. The functions become callbacks now, which are functions used as arguments, and they no longer need the parentheses. Now if we open up a browser, we can see selections and matches for 1.2 seconds before they disappear.
+
+# Show back of card initially and flip on select
+
+When playing memory, all of the cards are usually shown to you all at once then flipped. You then have to use your memory in order to beat the game, hence the name of the game. Its better to do this step once you've added the functionality to the game.
+
+The game has all the functionality we want, but not the styles. We need to:
+
+<li>Hide the cards initially</li>
+<li>Flip them over when selected</li>
+<li>Make matches disappear</li>
+
+All of this goes together, and will require a few structural changes to the code. We’ll have to add a bit more complicated CSS to get this done.
+
+First, our cards have all consisted of one div right now. In order to implement the flip, each div will need to consist of three divs: card, front and back divs.
+
+We’ll modify the card creation loop to add the front and back elements.
+
+Where we had clicked.dataset.name and clicked.classList.add, we’ll have to add parentNode now, since we’ll be clicking on an inner div (front or back) and the data-name is still on the outer div (card).
+
+Now we’re going to go back to CSS for a moment. To get the flip to work, we’re going to set each card as relative, and the back and front as absolute. All three will have the same height and width.
+
+The front of each card (technically the back if you’re thinking like a deck of cards, but I’m calling it the front because it’s the default view) will be a question mark box.
+
+The back will have all the properties for the background image to style property, and it will be rotated for the flip animation.
+
+Selected items will be rotated, and matched items will become white, which will override the background image applied through JavaScript.
+
+# Technology
+
+HTML5, CSS3, Vanilla Javascript
