@@ -49,3 +49,13 @@ const cardsArray = [{
     'img': 'img/goomba.png',
   },
 ];
+
+// Grab the div with an id of root
+const game = document.getElementsById('game');
+
+// Create a section with a class of grid
+const grid = documnet.createElement('section');
+grid.setAttribute('class', 'grid');
+
+// Append the grid section to the game div
+game.appendChild(grid);
