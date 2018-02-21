@@ -85,3 +85,11 @@ Currently, we only have two guesses. If they're a match, the match style will sh
 First, we’ll create a function to reset the guesses. This will set all counts and guesses back to their original values, as well as removing the selected CSS.
 
 After doing that we can make multiple matches. You’ll notice that the select style will disappear immediately if it’s not a match, but this is fine because we haven’t set any delays to allow it to display longer.
+
+# Add delay to selections for a little aesthetic appeal
+
+Currently, when we click on any of the elements, the transitions happen immediately. We want a delay after we make a selection so the user can see what their selection was before the card is hidden again. Right now it doesn’t matter because everything is visible, but we can just take care of it before putting the final style touches on the cards.
+
+We’re going to use setTimeout() to make the delays. First we’ll set my delay time, which we’re choosing to be 1200 milliseconds, or 1.2 seconds.
+
+All we're going to do now is put the functions from before in the setTimeout(), with the delay variable as the amount of time for the timeout to last. The functions become callbacks now, which are functions used as arguments, and they no longer need the parentheses. Now if we open up a browser, we can see selections and matches for 1.2 seconds before they disappear.

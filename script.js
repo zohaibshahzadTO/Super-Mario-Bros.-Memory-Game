@@ -104,6 +104,7 @@ gameGrid.forEach(item => {
   let firstGuess = '';
   let secondGuess = '';
   let previousTarget = null;
+  let delay = 1200;
   let count = 0;
 
   if (count < 2) {
@@ -123,11 +124,11 @@ gameGrid.forEach(item => {
       // and the first guess matches the second guess...
       if (firstGuess === secondGuess) {
         // run the match function
-        match();
-        resetGuesses();
+        setTimeout(match, delay);
+        setTimeout(resetGuesses, delay);
       }
       else {
-        resetGuesses();
+        setTimeout(resetGuesses, delay);
       }
     }
     // Set previous target to clicked
