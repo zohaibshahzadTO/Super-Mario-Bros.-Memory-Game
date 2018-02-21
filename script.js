@@ -101,16 +101,40 @@ gameGrid.forEach(item => {
     clicked.classList.add('selected');
   });
 
+  let firstGuess = '';
+  let secondGuess = '';
   let count = 0;
 
   if (count < 2) {
     count++;
-    // Add selected class
-    clicked.classList.add('selected');
+    if (count === 1) {
+      // Assign first guess
+      firstGuess = clicked.dataset.name;
+      clicked.classList.add('selected');
+    }
+    else {
+      // Assign second guess
+      secondGuess = clicked.dataset.name;
+      clicked.classList.add('selected');
+    }
+    // If both guesses are not empty
+    if (firstGuess !== '' && secondGuess !== '') {
+      // and the first guess matches the second guess...
+      if (firstGuess === secondGuess) {
+        // run the match function
+        match();
+      }
+    }
   }
 
+  // Add match CSS
 
-
+  const match = () => {
+    var selected = document.querySelectorAll('.selected');
+    selected.forEach(card => {
+      card.classList.add('match');
+    });
+  }
 
 
 

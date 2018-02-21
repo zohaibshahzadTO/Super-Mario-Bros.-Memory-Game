@@ -59,3 +59,15 @@ Now every selected div will have a blue border, as defined by the selected CSS.
 # Only allow two cards to be selected at a time
 
 We need to only allow two selections at a time, because we’re testing if two selected cards match. In order to do this, we’ll need to store the guesses and counter somewhere. First we’ll just store the count.
+
+# Determine if two selected cards are a match and hide them
+
+Now we'll create some CSS for matches. I’m going to give them a red border to differentiate them, and remove the background image. Why would I do that instead of just removing them from the DOM? Because we need to preserve the space they used to be – otherwise, all the elements would shift and it would no longer be a proper memory game.
+
+In addition, where we just had a count variable before, we’ll add a place to store the first and second guess as well.
+
+I’m going to make a function for matching elements. This will just loop through all selected elements when called, then add the match class.
+
+Now I have to call the match() function at the right time in the code. Back in our event listener, I’m going to assign the first and second guess to their respective variables. If they’re both not empty and match, the match() function will be called.
+
+Now, the guesses don’t reset, so we can only select or match one thing at a time. But if we select two elements we know match, the proper CSS will be applied
