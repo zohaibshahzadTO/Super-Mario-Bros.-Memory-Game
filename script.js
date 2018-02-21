@@ -92,8 +92,8 @@ gameGrid.forEach(item => {
     // The event target is our clicked item
     let clicked = event.target;
 
-    // Do not allow the grid section itself to be selectedl only select divs inside the grid
-    if (clicked.nodeName === 'SECTION') {
+    // Do not allow the grid section itself to be selected; only select divs inside the grid
+    if (clicked.nodeName === 'SECTION' || clicked === previousTarget) {
       return;
     }
 
@@ -103,6 +103,7 @@ gameGrid.forEach(item => {
 
   let firstGuess = '';
   let secondGuess = '';
+  let previousTarget = null;
   let count = 0;
 
   if (count < 2) {
@@ -125,6 +126,8 @@ gameGrid.forEach(item => {
         match();
       }
     }
+    // Set previous target to clicked
+    previousTarget = clicked;
   }
 
   // Add match CSS

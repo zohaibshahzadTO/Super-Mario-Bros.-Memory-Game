@@ -71,3 +71,9 @@ I’m going to make a function for matching elements. This will just loop throug
 Now I have to call the match() function at the right time in the code. Back in our event listener, I’m going to assign the first and second guess to their respective variables. If they’re both not empty and match, the match() function will be called.
 
 Now, the guesses don’t reset, so we can only select or match one thing at a time. But if we select two elements we know match, the proper CSS will be applied
+
+# Problem
+
+We've come across a problem. If we select the same element twice, it will consider it a match, because they both have the same data-name property. Obviously, that's not how the memory game works. We'll fix this first before moving on.
+
+By creating a variable called "previousTarget" and assigning null to it and then implementing that check to our return statement at the beginning at the top of the counter and then assigning the clicked value to "previousTarget" after the first click will disable the user from clicking on the same element twice.
