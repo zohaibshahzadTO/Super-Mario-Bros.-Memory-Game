@@ -30,3 +30,12 @@ Now we have 12 cards, but how do we display them? First, we’ll grab the elemen
 If you take a look at the script.js file at this commit, you'll see that all we did was add a section to the DOM.
 
 Now we want to get the images to display on the front end. We’ll loop through each item in cardsArray with forEach(), create a new card div for each object, and set the data-name attribute and background-image style property of the div. We will then append that div to the grid. This will give us 12 divs in total.
+
+So, what’s the point of the data-name attribute? Data attributes allow us to store extra data in an HTML element. Any non-standard attribute should begin with data-.
+
+At the end, each div (card) in the grid will look something like this :
+
+<b><div class="card" data-name="shell" style="background-image: url("img/blueshell.png");"></div></b>
+
+
+# Duplicate the cards to have 2 sets of 12
