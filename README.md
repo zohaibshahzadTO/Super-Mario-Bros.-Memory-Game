@@ -39,3 +39,5 @@ At the end, each div (card) in the grid will look something like this :
 
 
 # Duplicate the cards to have 2 sets of 12
+
+Step two is much simpler than step one. Now we’re going to duplicate the cardsArray array, then loop through that instead. First, below the array, we'll create a gameGrid variable, and duplicate the array by using concat().

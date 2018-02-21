@@ -76,7 +76,29 @@ cardsArray.forEach(item => {
 
     // Append the div to the grid section
     grid.appendChild(card);
-
 });
 
-    
+// Duplicate array to create a match for each card
+let gameGrid = cardsArray.concat(cardsArray);
+
+// For each item in the gameGrid array...
+gameGrid.forEach(item => {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+})
