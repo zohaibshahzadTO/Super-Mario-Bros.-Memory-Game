@@ -77,3 +77,11 @@ Now, the guesses don’t reset, so we can only select or match one thing at a ti
 We've come across a problem. If we select the same element twice, it will consider it a match, because they both have the same data-name property. Obviously, that's not how the memory game works. We'll fix this first before moving on.
 
 By creating a variable called "previousTarget" and assigning null to it and then implementing that check to our return statement at the beginning at the top of the counter and then assigning the clicked value to "previousTarget" after the first click will disable the user from clicking on the same element twice.
+
+# Reset guess count after 2
+
+Currently, we only have two guesses. If they're a match, the match style will show. If they’re not, the regular selected style will show. We want to allow multiple guesses. We’ll have to do this by resetting the guess count after two guesses, whether they matched or not.
+
+First, we’ll create a function to reset the guesses. This will set all counts and guesses back to their original values, as well as removing the selected CSS.
+
+After doing that we can make multiple matches. You’ll notice that the select style will disappear immediately if it’s not a match, but this is fine because we haven’t set any delays to allow it to display longer.
