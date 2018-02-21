@@ -104,6 +104,7 @@ The game has all the functionality we want, but not the styles. We need to:
 <li>Flip them over when selected</li>
 <li>Make matches disappear</li>
 
+
 All of this goes together, and will require a few structural changes to the code. We’ll have to add a bit more complicated CSS to get this done.
 
 First, our cards have all consisted of one div right now. In order to implement the flip, each div will need to consist of three divs: card, front and back divs.
