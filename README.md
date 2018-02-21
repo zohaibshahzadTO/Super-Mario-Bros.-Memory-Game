@@ -24,3 +24,7 @@ We’ll add some basic styles, just enough for the app to make sense. No framewo
 # Step 1
 
 The first step is to display 12 cards, each with a different value. To do this, I’m going to create an array of objects, and put it in the cardsArray variable. Each object will contain a name and an image.
+
+Now we have 12 cards, but how do we display them? First, we’ll grab the element we said would be the root for the entire app – the div with an id of game. We’ll create a new section element, give it the grid class, and append it to the DOM inside our game root div.
+
+If you take a look at the script.js file at this commit, you'll see that all we did was add a section to the DOM.
