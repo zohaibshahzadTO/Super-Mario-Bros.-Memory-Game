@@ -53,3 +53,9 @@ Place this code right after the declaration of gameGrid.
 Now we should be able to select cards. We're just going to add a simple CSS style so we can see selected items easily.
 
 We’ll add an event listener to the entire grid. Anytime an element is clicked, the selected class will be applied to it. Add this code to the bottom of script.js
+
+Now every selected div will have a blue border, as defined by the selected CSS.
+
+# Only allow two cards to be selected at a time
+
+We need to only allow two selections at a time, because we’re testing if two selected cards match. In order to do this, we’ll need to store the guesses and counter somewhere. First we’ll just store the count.

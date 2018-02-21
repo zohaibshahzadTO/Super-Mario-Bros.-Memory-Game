@@ -101,10 +101,13 @@ gameGrid.forEach(item => {
     clicked.classList.add('selected');
   });
 
+  let count = 0;
 
-
-
-
+  if (count < 2) {
+    count++;
+    // Add selected class
+    clicked.classList.add('selected');
+  }
 
 
 
