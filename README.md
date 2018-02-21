@@ -28,3 +28,5 @@ The first step is to display 12 cards, each with a different value. To do this, 
 Now we have 12 cards, but how do we display them? First, we’ll grab the element we said would be the root for the entire app – the div with an id of game. We’ll create a new section element, give it the grid class, and append it to the DOM inside our game root div.
 
 If you take a look at the script.js file at this commit, you'll see that all we did was add a section to the DOM.
+
+Now we want to get the images to display on the front end. We’ll loop through each item in cardsArray with forEach(), create a new card div for each object, and set the data-name attribute and background-image style property of the div. We will then append that div to the grid. This will give us 12 divs in total.
