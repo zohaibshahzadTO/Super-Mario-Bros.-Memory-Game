@@ -16,3 +16,11 @@ Before writing any code, we need to get an idea of the actual steps to take to g
 <li>Add delay to selections.</li>
 <li>Show back of card initially and flip on select</li>
 <li>Finished game!</li>
+
+# CSS
+
+We’ll add some basic styles, just enough for the app to make sense. No frameworks or unnecessary code here, or even any preprocessors. We're just creating a flex grid with cards. Each card is 150×150, and has background properties because we’ll be adding the card images soon as background images. This CSS will be adjusted as we add a few more complex features to the code, like card flipping.
+
+# Step 1
+
+The first step is to display 12 cards, each with a different value. To do this, I’m going to create an array of objects, and put it in the cardsArray variable. Each object will contain a name and an image.
