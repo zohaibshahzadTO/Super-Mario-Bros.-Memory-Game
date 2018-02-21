@@ -85,7 +85,8 @@ let gameGrid = cardsArray.concat(cardsArray);
 gameGrid.forEach(item => {
 
 
-
+  // Randomize game grid on each load
+  gameGrid.sort(() => 0.5 - Math.random());
 
 
 
